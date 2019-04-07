@@ -1,0 +1,29 @@
+<?PHP
+
+
+$pass=$_POST['username'];
+$confirm=$_POST['pa'];
+$attempt=$_POST['max'];
+$mark=$_POST['marks'];
+$deduct=$_POST['dmarks'];
+$con=mysql_connect("localhost","root","");
+mysql_select_db("exam",$con);
+mysql_query('update faculty_data set max_attempts="$attempt",max_marks="$mark",deduction="$deduct" where username="admin" and password="msrit";')or die("error");
+mysql_close("$con");
+
+
+
+
+if($pass==$confirm)
+{
+$con=mysql_connect("localhost","root","");
+mysql_select_db("exam",$con);
+mysql_query('update student_data set password=$pass where usn="faculty";')or die("error");
+echo"<html><body><h4 align='center'>REGISTRATION COMPLETED SUCCESSFULLY!! THANK YOU .</h4></body></html>";	
+$p=1;
+}
+if($p!=1)
+{
+echo"<html><body><h4 align='center'>Password field mismatch</h4></body></html>";	
+}
+?>

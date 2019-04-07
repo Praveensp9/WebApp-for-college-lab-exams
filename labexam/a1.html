@@ -1,0 +1,92 @@
+
+echo"$k";
+<?php
+session_start();
+$k=rand(1,7);
+$_SESSION['g']=$k;
+
+if ($_GET['alldone']) 
+{
+  allDone();
+}
+ elseif ($_POST['submit'])
+{
+  submit();
+} 
+else
+{
+  form();
+}
+
+function submit()
+{
+  i=0;
+  i=i+1;
+  $self = $_SERVER['SCRIPT_NAME'];
+  $data = $_POST['data'];
+  mail('staff@example.com', 'Data Submission', $data);
+  header("Location: $self?alldone=1");
+  exit(0);
+}
+
+function allDone() 
+{
+  $self = $_SERVER['SCRIPT_NAME'];
+?>
+<html>
+
+<body>
+<a href="<?php echo $_SESSION['g']?>"></a>
+</body>
+</html>
+<?php
+}
+function form()
+{
+  $self = $_SERVER['SCRIPT_NAME'];
+?>
+<html>
+
+<body>
+<p>
+<form method="POST" action="<?php echo $self;?>">
+<textarea name="data">
+</textarea>
+</p>
+<p>
+<input type="submit" name="submit" value="Submit Data" />
+</p><p></p>
+</form>
+</body>
+</html>
+<?php
+}
+?>
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+2.
+
+<html>
+    <head>
+        <title>Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+        function codeAddress() {
+            alert(window.location.href = 'login.php');
+        }
+
+        </script>
+    </head>
+    <body onload="codeAddress();">
+
+    </body>
+</html>

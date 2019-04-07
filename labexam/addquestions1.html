@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+function chk1()
+{
+window.location.href="index.html";
+}
+function chk2()
+{
+if(confirm("Do you want to delete all the questions.?"))
+{
+window.location.href="reset.php";
+}
+}
+</script>
+
+<STYLE TYPE="TEXT/CSS">
+
+h1 {font-size:30pt;color:orange;}
+
+label {font-size:16pt;color:darkgrey; font-family:Palatino Linotype, Book Antiqua, Palatino, serif;}
+</STYLE>
+</head>
+<body background="3.jpg" >
+
+<FORM NAME="FORM1" METHOD="post" ACTION="addquestions.php" align='center' >
+<FIELDSET>
+<LEGEND> <h1 color='orange'>Questions</h1></LEGEND>
+
+<LABEL >Sl_no:<input type="text"   NAME="slno" VALUE='' id="u1" required/></LABEL><BR />
+<textarea  NAME="quest" VALUE='' rows="20" cols="100"  style="font-size:15" placeholder="Write the question here" wrap="PHYSICAL" required></textarea><br/> 
+<LABEL><BR /><input  type="SUBMIT" NAME='submit' VALUE='Submit' />
+<input  type="button" NAME='submit' VALUE='Reset' 
+onclick="chk2();" />
+<input type="button" value="Home" name="Home"  onclick="chk1();"/>
+
+</LABEL>
+</FIELDSET>
+</FORM>
+</body>
+</html>

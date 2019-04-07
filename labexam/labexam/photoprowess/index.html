@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: PhotoProwess
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Labexam.Msrit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.defaultvalue.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.scrollTo-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#fullname, #validemail, #message").defaultvalue("Full Name", "Email Address", "Message");
+    $('#shout a').click(function () {
+        var to = $(this).attr('href');
+        $.scrollTo(to, 1200);
+        return false;
+    });
+    $('a.topOfPage').click(function () {
+        $.scrollTo(0, 1200);
+        return false;
+    });
+    $("#tabcontainer").tabs({
+        event: "click"
+    });
+});
+</script>
+<!-- Homepage Only Scripts -->
+<script type="text/javascript" src="layout/scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('#hpage_slider').after('<div id="fsn"><ul id="fs_pagination">').cycle({
+        timeout: 5000,
+        fx: 'fade',
+        pager: '#fs_pagination',
+        pause: 1,
+        pauseOnPagerHover: 0
+    });
+});
+</script>
+<script type="text/javascript" src="layout/scripts/piecemaker/swfobject/swfobject.js"></script>
+<script type="text/javascript">
+var flashvars = {};
+flashvars.cssSource = "layout/scripts/piecemaker/piecemaker.css";
+flashvars.xmlSource = "layout/scripts/piecemaker/piecemaker.xml";
+var params = {};
+params.play = "false";
+params.menu = "false";
+params.scale = "showall";
+params.wmode = "transparent";
+params.allowfullscreen = "true";
+params.allowscriptaccess = "sameDomain";
+params.allownetworking = "all";
+swfobject.embedSWF('layout/scripts/piecemaker/piecemaker.swf', 'piecemaker', '960', '430', '10', null, flashvars, params, null);
+</script>
+<!-- End Homepage Only Scripts -->
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="topbar" class="clear">
+ 
+    <form action="#" method="post" id="search">
+     
+    </form>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="header" class="clear">
+    <div class="fl_left">
+
+      <h1><a href="index.html">M.S.Ramaiah Institute Of Technology</a></h1>
+      <p>(An autonomous Institute Affilated To VTU )</p>
+	  <p>Accredited by National Board Of Accerditation</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li class="last"><a href="http://msritlabexam.wc.lt/project/login2.php">Faculty Login</a></li>
+        <li><a href="http://msritlabexam.wc.lt/project/login1.php">Student Login</a></li>
+        <li><a href="#">About</a>
+         
+        </li>
+        <li><a href="">Home</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="featured_slide"> 
+    <!-- ####################################################################################################### -->
+    <div id="piecemaker">
+          <div ><img src="images/demo/piecemaker/6.jpg" alt="" /></div>
+          <div ><img src="images/demo/piecemaker/7.jpg" alt="" /></div>
+          <div ><img src="images/demo/piecemaker/8.jpg" alt="" /></div>
+          <div ><img src="images/demo/piecemaker/9.jpg" alt="" /></div> 
+		  <div ><img src="images/demo/piecemaker/10.jpg" alt="" /></div>
+		 </div>
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="container" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div id="shout" class="clear">
+      <div class="fl_left">
+       
+      </div>
+      <p align="center">WELCOME TO LABEXAMS.MSRIT</p>
+    </div>
+    <!-- ####################################################################################################### -->
+   <!--  <div id="homepage" class="clear">
+    <p> <div class="fl_left">
+     
+        <div id="hpage_slider">
+          <div class="item"><img src="images/demo/featured-project/16.jpg" alt="" /></div>
+          <div class="item"><img src="images/demo/featured-project/19.jpg" alt="" /></div>
+          <div class="item"><img src="images/demo/featured-project/17.jpg" alt="" /></div>
+          <div class="item"><img src="images/demo/featured-project/18.jpg" alt="" /></div>
+          <div class="item"><img src="images/demo/featured-project/5.gif" alt="" /></div>
+        </div>hello</p>
+    = -->
+         
+<!-- ####################################################################################################### -->
+   <!-- <div class="wrapper">
+  <div id="footer" class="clear">
+    <div class="fl_left">
+      <div class="about_us border">
+        
+      </div>
+      
+       
+      </div>
+    </div> -->
+    <!-- ####################################################################################################### -->
+   
+</body>
+</html>
